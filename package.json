@@ -1,0 +1,37 @@
+{
+  "name": "agencia-humanize-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "assets": "node scripts/brand.mjs && node scripts/images.mjs",
+    "images": "node scripts/images.mjs",
+    "predev": "node scripts/images.mjs",
+    "dev": "vite",
+    "prebuild": "node scripts/images.mjs && node scripts/sitemap.ts",
+    "build": "tsc --noEmit && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.ts",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "framer-motion": "^12.43.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "sharp": "^0.34.5",
+    "subset-font": "^2.9.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "5.9",
+    "vite": "^7.3.7"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}

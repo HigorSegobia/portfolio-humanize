@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#ff9c19" />
+    <title>Agência Humanize | Publicidade, marketing e audiovisual em Ribeirão Preto</title>
+    <meta name="description" content="Agência de publicidade e marketing em Ribeirão Preto. Audiovisual com estratégia, social media, cobertura de eventos e tráfego pago para empresas de Ribeirão Preto, Monte Alto e região." />
+    <link rel="canonical" href="https://higorsegobia.github.io/portfolio-humanize/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" href="/fonts/author-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/author-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/caveat-700.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- Open Graph padrão (WhatsApp, Facebook e LinkedIn leem estes valores) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Agência Humanize" />
+    <meta property="og:title" content="Agência Humanize | Publicidade, marketing e audiovisual em Ribeirão Preto" />
+    <meta property="og:description" content="Conteúdo nasce de gente, não de tendência. Audiovisual com estratégia para empresas de Ribeirão Preto, Monte Alto e região." />
+    <meta property="og:url" content="https://higorsegobia.github.io/portfolio-humanize/" />
+    <meta property="og:image" content="https://higorsegobia.github.io/portfolio-humanize/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Revelar no scroll: marca data-visto quando o elemento aparece (ver src/index.css) -->
+    <script>
+      (function () {
+        var d = document.documentElement
+        if (!('IntersectionObserver' in window)) return
+        d.classList.add('js')
+        var io = new IntersectionObserver(function (itens) {
+          itens.forEach(function (i) {
+            if (i.isIntersecting) { i.target.setAttribute('data-visto', ''); io.unobserve(i.target) }
+          })
+        }, { rootMargin: '0px 0px -8% 0px' })
+        var agendado = false
+        function procurar() {
+          agendado = false
+          document.querySelectorAll('[data-revelar]:not([data-visto])').forEach(function (el) { io.observe(el) })
+        }
+        new MutationObserver(function () {
+          if (!agendado) { agendado = true; requestAnimationFrame(procurar) }
+        }).observe(d, { childList: true, subtree: true })
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="padding:24px;font-family:sans-serif">
+        Agência Humanize: publicidade, marketing e audiovisual em Ribeirão Preto.
+        Fale com a gente pelo WhatsApp: <a href="https://wa.me/5516999944333">(16) 99994-4333</a>.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

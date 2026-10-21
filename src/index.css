@@ -1,0 +1,166 @@
+@import 'tailwindcss';
+
+/*
+  Tokens da identidade Humanize (fonte: brand/Cores e brand/Tipografia).
+  A paleta padrão do Tailwind é desligada: só existem as cores da marca.
+*/
+@theme {
+  --color-*: initial;
+
+  /* Principais */
+  --color-coral: #ff5459;
+  --color-laranja: #ff9c19;
+  --color-menta: #01debb;
+  --color-roxo: #a840f1;
+  --color-creme: #fff6eb;
+
+  /* Secundárias (web) */
+  --color-coral-claro: #ff767a;
+  --color-laranja-claro: #ffc475;
+  --color-menta-claro: #67ebd6;
+  --color-roxo-claro: #cb8cf7;
+  --color-vinho: #802a2d;
+  --color-caramelo: #804e0d;
+  --color-floresta: #00382f;
+  --color-ameixa: #2a103c;
+  --color-areia: #bfb9b0;
+  --color-grafite: #403e3b;
+
+  /* Sombras das ilustrações e selos oficiais, usadas para texto colorido com contraste AA */
+  --color-coral-escuro: #b2363a;
+  --color-roxo-escuro: #7e30b5;
+  --color-menta-escuro: #04725d;
+  --color-laranja-escuro: #bf7513;
+
+  --font-sans: 'Author', 'Author Fallback', ui-sans-serif, system-ui, sans-serif;
+  --font-hand: 'Caveat', 'Caveat Fallback', cursive;
+
+  --radius-card: 1.5rem;
+  --radius-bloco: 2.5rem;
+
+  --shadow-papel: 0 22px 40px -18px rgb(42 16 60 / 0.5);
+  --shadow-card: 0 18px 40px -24px rgb(42 16 60 / 0.45);
+
+  --breakpoint-xs: 25rem;
+
+  /* Animações da marca (todas desligadas para quem pede menos movimento) */
+  --animate-pulso: pulso 2.2s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
+  --animate-batida: batida 1.1s ease-in-out infinite;
+  --animate-flutuar: flutuar 6s ease-in-out infinite;
+  --animate-balanco: balanco 3.2s ease-in-out infinite;
+  --animate-girar-lento: girar 22s linear infinite;
+  --animate-faixa: faixa 32s linear infinite;
+  --animate-faixa-reversa: faixa 38s linear infinite reverse;
+
+  @keyframes pulso {
+    0% { transform: scale(1); opacity: 0.7; }
+    80%, 100% { transform: scale(1.9); opacity: 0; }
+  }
+  @keyframes batida {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.18); }
+    30% { transform: scale(0.96); }
+    45% { transform: scale(1.1); }
+  }
+  @keyframes flutuar {
+    0%, 100% { translate: 0 0; rotate: 0deg; }
+    50% { translate: 0 -10px; rotate: 4deg; }
+  }
+  @keyframes balanco {
+    0%, 100% { rotate: -6deg; }
+    50% { rotate: 6deg; }
+  }
+  @keyframes girar {
+    to { rotate: 360deg; }
+  }
+  @keyframes faixa {
+    to { transform: translateX(-50%); }
+  }
+}
+
+/* Fontes servidas localmente (geradas de brand/Tipografia por scripts/brand.mjs) */
+@font-face { font-family: 'Author'; src: url('/fonts/author-300.woff2') format('woff2'); font-weight: 300; font-display: swap; }
+@font-face { font-family: 'Author'; src: url('/fonts/author-400.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Author'; src: url('/fonts/author-400-italic.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Author'; src: url('/fonts/author-500.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Author'; src: url('/fonts/author-600.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Author'; src: url('/fonts/author-700.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Caveat'; src: url('/fonts/caveat-400.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Caveat'; src: url('/fonts/caveat-600.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Caveat'; src: url('/fonts/caveat-700.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+
+/* Fontes de reserva com métricas ajustadas: enquanto a fonte da marca carrega,
+   o texto ocupa o mesmo espaço e a página não "pula" (CLS). */
+@font-face { font-family: 'Author Fallback'; src: local('Arial'); size-adjust: 84%; }
+@font-face { font-family: 'Caveat Fallback'; src: local('Arial'); size-adjust: 71%; }
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5.5rem;
+  }
+  body {
+    @apply bg-creme text-ameixa font-sans antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+  p { text-wrap: pretty; }
+  ::selection { @apply bg-laranja text-ameixa; }
+  :focus-visible {
+    outline: 3px solid var(--color-roxo-escuro);
+    outline-offset: 3px;
+    border-radius: 0.375rem;
+  }
+  .em-fundo-escuro :focus-visible { outline-color: var(--color-laranja); }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-[76rem] px-4 sm:px-6 lg:px-8;
+  }
+  .manuscrito {
+    @apply font-hand font-bold;
+    letter-spacing: 0;
+    line-height: 1;
+  }
+}
+
+/*
+  Revelar no scroll: elementos com data-revelar entram quando aparecem na tela.
+  O script inline do index.html marca data-visto; sem JavaScript tudo fica visível.
+  Variações: subir (padrão), esquerda, direita, zoom, girar, desenhar (sublinhados).
+  Atraso por item: style="--atraso: 120ms".
+*/
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-revelar] {
+    transition:
+      opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+      translate 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+      scale 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+      rotate 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+      clip-path 0.9s cubic-bezier(0.6, 0, 0.2, 1);
+    transition-delay: var(--atraso, 0ms);
+  }
+  .js [data-revelar]:not([data-visto]) { opacity: 0; translate: 0 2.25rem; }
+  .js [data-revelar='esquerda']:not([data-visto]) { translate: -2.5rem 0; }
+  .js [data-revelar='direita']:not([data-visto]) { translate: 2.5rem 0; }
+  .js [data-revelar='zoom']:not([data-visto]) { translate: 0 1rem; scale: 0.88; }
+  .js [data-revelar='girar']:not([data-visto]) { translate: 0 1.5rem; rotate: -8deg; scale: 0.9; }
+  .js [data-revelar='desenhar'] { transition-delay: calc(var(--atraso, 0ms) + 250ms); }
+  .js [data-revelar='desenhar']:not([data-visto]) { opacity: 1; translate: none; clip-path: inset(0 100% 0 0); }
+  .js [data-revelar='desenhar'][data-visto] { clip-path: inset(0 0 0 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,151 @@
+import type { Trabalho } from './tipos.ts'
+
+// Grade de trabalhos (estilo feed). A ordem aqui é a ordem no site; os 6 primeiros aparecem na home.
+// Clientes REAIS da Humanize (ficticio: false). Os vídeos abrem dentro do site pelo embed do Instagram.
+//
+// Capas: imagens de capa dos próprios reels, em media/fotos/capa-<slug>.jpg.
+// Para trocar, substitua o arquivo (mesmo nome) ou aponte "foto" para outra imagem de media/fotos/.
+// Sem foto, o card usa uma capa nas cores da marca (campo "cor").
+//
+// midia:
+//  - { tipo: 'instagram', url: 'https://www.instagram.com/reel/CODIGO/' } -> toca o reel no modal (embed)
+//  - { tipo: 'video', src: '/videos/arquivo.mp4', poster: 'nome-da-foto' } -> vídeo próprio no modal
+
+export const trabalhos: Trabalho[] = [
+  // ---------- Moda ----------
+  {
+    slug: 'folk',
+    titulo: 'Folk',
+    cliente: 'Moda',
+    categoria: 'moda',
+    foto: 'capa-folk',
+    alt: 'Duas modelos com lenços na cabeça dentro de um avião de pequeno porte',
+    cor: 'roxo',
+    formato: 'reel',
+    midia: { tipo: 'instagram', url: 'https://www.instagram.com/reel/DNA0azPRFmR/' },
+    ficticio: false,
+  },
+  // ---------- Odontologia ----------
+  {
+    slug: 'mello-e-pinelli',
+    titulo: 'Mello e Pinelli',
+    cliente: 'Odontologia',
+    categoria: 'odontologia',
+    foto: 'capa-mello-e-pinelli',
+    alt: 'Consultório odontológico com a frase “Conheça mais sobre o meu método”',
+    cor: 'menta',
+    formato: 'reel',
+    midia: { tipo: 'instagram', url: 'https://www.instagram.com/reel/DdtVjd_R-1M/' },
+    ficticio: false,
+  },
+  // ---------- Gastronomia ----------
+  {
+    slug: 'saguta',
+    titulo: 'Saguta Burgers',
+    cliente: 'Hamburgueria',
+    categoria: 'gastronomia',
+    foto: 'capa-saguta',
+    alt: 'Hambúrguer com bacon e queijo derretido em fundo escuro',
+    cor: 'laranja',
+    formato: 'reel',
+    midia: { tipo: 'instagram', url: 'https://www.instagram.com/reel/DZYNqpgs__5/' },
+    ficticio: false,
+  },
+  // ---------- Farmácia ----------
+  {
+    slug: 'poupe-ja',
+    titulo: 'Poupe Já',
+    cliente: 'Farmácia · Monte Alto',
+    categoria: 'farmacia',
+    foto: 'capa-poupe-ja',
+    alt: 'Entregador e atendente da Poupe Já sorrindo com a frase “A Poupe Já te entrega!”',
+    cor: 'coral',
+    formato: 'reel',
+    midia: { tipo: 'instagram', url: 'https://www.instagram.com/reel/DdmfcSdh_FS/' },
+    ficticio: false,
+  },
+  {
+    slug: 'almad',
+    titulo: 'Almad',
+    cliente: 'Moda',
+    categoria: 'moda',
+    foto: 'capa-almad',
+    alt: 'Capa da coleção Expressão, da Almad, com data de 15 de julho',
+    cor: 'laranja',
+    formato: 'reel',
+    midia: { tipo: 'instagram', url: 'https://www.instagram.com/reel/Da0I1m0ReSx/' },
+    ficticio: false,
+  },
+  {
+    slug: 'boxpark',
+    titulo: 'Boxpark',
+    cliente: 'Gastronomia',
+    categoria: 'gastronomia',
+    foto: 'capa-boxpark',
+    alt: 'Mulher sorrindo enquanto serve massa com queijo derretido',
+    cor: 'roxo',
+    formato: 'reel',
+    midia: { tipo: 'instagram', url: 'https://www.instagram.com/reel/DOJnbiVDtkj/' },
+    ficticio: false,
+  },
+  {
+    slug: 'biomagistral-monte-alto',
+    titulo: 'Biomagistral',
+    cliente: 'Farmácia · Monte Alto',
+    categoria: 'farmacia',
+    foto: 'capa-biomagistral-monte-alto',
+    alt: 'Máquina de encapsular na farmácia, com o texto “Processo de fabricação cápsula”',
+    cor: 'menta',
+    formato: 'reel',
+    midia: { tipo: 'instagram', url: 'https://www.instagram.com/reel/Dbl6A9MjVsB/' },
+    ficticio: false,
+  },
+  {
+    slug: 'raissa',
+    titulo: 'Dra. Raissa Martins',
+    cliente: 'Odontologia',
+    categoria: 'odontologia',
+    foto: 'capa-raissa',
+    alt: 'Dra. Raissa Martins apontando para fotos de sorriso em uma tela',
+    cor: 'coral',
+    formato: 'reel',
+    midia: { tipo: 'instagram', url: 'https://www.instagram.com/reel/DUWd8_4EQkf/' },
+    ficticio: false,
+  },
+  {
+    slug: 'kamzu',
+    titulo: 'Kamzu',
+    cliente: 'Gastronomia',
+    categoria: 'gastronomia',
+    foto: 'capa-kamzu',
+    alt: 'Dois milkshakes com chantilly e granulado brindando',
+    cor: 'menta',
+    formato: 'post',
+    midia: { tipo: 'instagram', url: 'https://www.instagram.com/p/DGnumFgO7o6/' },
+    ficticio: false,
+  },
+  {
+    slug: 'biomagistral-franca',
+    titulo: 'Biomagistral',
+    cliente: 'Farmácia · Franca',
+    categoria: 'farmacia',
+    foto: 'capa-biomagistral-franca',
+    alt: 'Mulher em frente à fachada da Biomagistral Franca com a frase “Apenas uma sala vazia?”',
+    cor: 'laranja',
+    formato: 'reel',
+    midia: { tipo: 'instagram', url: 'https://www.instagram.com/reel/DexAG4LNMWW/' },
+    ficticio: false,
+  },
+  {
+    slug: 'sergio',
+    titulo: 'Dr. Sérgio Sanchini',
+    cliente: 'Odontologia',
+    categoria: 'odontologia',
+    foto: 'capa-sergio',
+    alt: 'Paciente deitado em cadeira de dentista no consultório',
+    cor: 'roxo',
+    formato: 'reel',
+    midia: { tipo: 'instagram', url: 'https://www.instagram.com/reel/DWSEbn5BvZ1/' },
+    ficticio: false,
+  },
+]

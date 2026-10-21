@@ -1,0 +1,19 @@
+node_modules
+dist
+dist-ssr
+.env
+.env.local
+*.log
+
+# Gerados no build (npm run images / prebuild)
+public/img/fotos/
+src/content/imagens.gen.json
+public/sitemap.xml
+public/robots.txt
+
+# Identidade visual original: pesada (~200 MB, arquivos .ai) e com fontes licenciadas.
+# Fica só no computador; o site usa a versão já extraída em src/assets/brand e public/fonts.
+/brand/
+/humanize-referencia/
+
+.claude/
