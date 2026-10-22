@@ -37,3 +37,18 @@ export function telefoneValido(valor: string) {
   const d = valor.replace(/\D/g, '')
   return d.length === 10 || d.length === 11
 }
+
+/** Endereço em uma linha: "R. ..., Sala 7 - Centro, Monte Alto - SP, 15910-000" */
+export function enderecoCompleto() {
+  const e = site.endereco
+  return `${e.rua} - ${e.bairro}, ${e.cidade} - ${e.estado}, ${e.cep}`
+}
+
+/** Link do endereço no Google Maps */
+export function linkMapa() {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(enderecoCompleto())}`
+}
+
+export function linkTelefone() {
+  return `tel:+${site.contato.telefone}`
+}

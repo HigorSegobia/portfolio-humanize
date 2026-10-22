@@ -5,7 +5,7 @@ import { servicos } from '@/content/servicos'
 import { cases } from '@/content/cases'
 import { depoimentos } from '@/content/depoimentos'
 import type { Case, Cor, Servico } from '@/content/tipos'
-import { linkWhatsapp } from '@/lib/whatsapp'
+import { enderecoCompleto, linkMapa, linkTelefone, linkWhatsapp } from '@/lib/whatsapp'
 import { registrarLead } from '@/lib/analytics'
 import { Foto } from './Foto'
 import { Icone, Ilustracao, Logo, Rabisco, Selo, Sublinhado } from './marca'
@@ -270,9 +270,32 @@ export function SecaoContato() {
                 </a>
               </dd>
             </div>
+            {site.contato.telefone !== site.contato.whatsapp && (
+              <div className="flex flex-wrap items-baseline gap-x-4">
+                <dt className="w-24 text-sm font-semibold uppercase tracking-wider">Telefone</dt>
+                <dd>
+                  <a href={linkTelefone()} className="font-semibold underline decoration-2 underline-offset-4">
+                    {site.contato.telefoneExibicao}
+                  </a>
+                </dd>
+              </div>
+            )}
             <div className="flex flex-wrap items-baseline gap-x-4">
-              <dt className="w-24 text-sm font-semibold uppercase tracking-wider">Onde</dt>
-              <dd className="font-semibold">{site.endereco.regiao}</dd>
+              <dt className="w-24 text-sm font-semibold uppercase tracking-wider">E-mail</dt>
+              <dd className="min-w-0 break-all">
+                <a href={`mailto:${site.contato.email}`} className="font-semibold underline decoration-2 underline-offset-4">
+                  {site.contato.email}
+                </a>
+              </dd>
+            </div>
+            <div className="flex flex-wrap items-baseline gap-x-4">
+              <dt className="w-24 text-sm font-semibold uppercase tracking-wider">Endereço</dt>
+              <dd className="min-w-0 flex-1">
+                <a href={linkMapa()} target="_blank" rel="noopener noreferrer" className="font-semibold underline decoration-2 underline-offset-4">
+                  {enderecoCompleto()}
+                </a>
+                <span className="mt-1 block text-base">Atendemos {site.endereco.regiao}</span>
+              </dd>
             </div>
           </dl>
           <div className="mt-10 hidden w-56 origin-bottom animate-balanco [animation-duration:5s] lg:block">

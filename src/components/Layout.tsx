@@ -3,7 +3,7 @@ import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import { domAnimation, LazyMotion, m, MotionConfig } from 'framer-motion'
 import { site } from '@/content/site'
 import { servicos } from '@/content/servicos'
-import { linkWhatsapp } from '@/lib/whatsapp'
+import { enderecoCompleto, linkMapa, linkTelefone, linkWhatsapp } from '@/lib/whatsapp'
 import { iniciarAnalytics, registrarLead, registrarPagina } from '@/lib/analytics'
 import { Logo, Rabisco } from './marca'
 import { classesBotao } from './ui'
@@ -179,7 +179,23 @@ function Rodape() {
                 Instagram @{site.contato.instagram}
               </a>
             </li>
-            <li>{site.endereco.regiao}</li>
+            {site.contato.telefone !== site.contato.whatsapp && (
+              <li>
+                <a href={linkTelefone()} className="hover:text-laranja">
+                  Telefone {site.contato.telefoneExibicao}
+                </a>
+              </li>
+            )}
+            <li className="break-all">
+              <a href={`mailto:${site.contato.email}`} className="hover:text-laranja">
+                {site.contato.email}
+              </a>
+            </li>
+            <li>
+              <a href={linkMapa()} target="_blank" rel="noopener noreferrer" className="hover:text-laranja">
+                <address className="not-italic">{enderecoCompleto()}</address>
+              </a>
+            </li>
             <li>
               <Link to="/trabalhos" className="hover:text-laranja">Trabalhos</Link>
               {' · '}

@@ -22,21 +22,28 @@ export const site = {
   bio: 'Conteúdo nasce de gente, não de tendência. Audiovisual com estratégia.',
 
   contato: {
-    whatsapp: '5516999944333',
-    whatsappExibicao: '(16) 99994-4333',
+    whatsapp: '5516997619684',
+    whatsappExibicao: '(16) 99761-9684',
     instagram: 'agenciahumanize_',
     instagramUrl: 'https://www.instagram.com/agenciahumanize_/',
     liderInstagram: 'byjuliaribeiro',
-    email: '',
+    /** Telefone da agência (formato 55 + DDD + número). Hoje é o mesmo número do WhatsApp. */
+    telefone: '5516997619684',
+    telefoneExibicao: '(16) 99761-9684',
+    email: 'agenciahumanize1@gmail.com',
   },
 
+  /** Endereço do escritório (aparece no contato, no rodapé e no Google via schema.org) */
   endereco: {
-    cidade: 'Ribeirão Preto',
+    rua: 'R. Nhonhô Livramento, 1685, Sala 7',
+    bairro: 'Centro',
+    cidade: 'Monte Alto',
     estado: 'SP',
+    cep: '15910-000',
     pais: 'BR',
+    /** Região atendida (texto curto usado no topo da home e no contato) */
     regiao: 'Ribeirão Preto, Monte Alto e região',
-    areasAtendidas: ['Ribeirão Preto', 'Monte Alto', 'Sertãozinho', 'Jaboticabal', 'Barretos', 'Franca'],
-    geo: { lat: -21.1775, lng: -47.8103 },
+    areasAtendidas: ['Monte Alto', 'Ribeirão Preto', 'Sertãozinho', 'Jaboticabal', 'Barretos', 'Franca'],
   },
 
   /** Mensagem do botão de WhatsApp (botão flutuante e links diretos). */
