@@ -15,6 +15,7 @@ export type Categoria =
   | 'odontologia'
   | 'gastronomia'
   | 'farmacia'
+  | 'saude'
 
 export type IconeMarca =
   | 'coracao'
@@ -61,14 +62,26 @@ export interface Case {
   slug: string
   titulo: string
   cliente: string
-  segmento: string
-  cidade: string
+  segmento?: string
+  cidade?: string
+  /** Período dos números (ex.: "Março de 2026") */
+  periodo?: string
   resumo: string
   destaque: Numero
   desafio: string
   feito: string[]
   numeros: Numero[]
+  /** Números extras em destaque (ex.: visualizações por tipo de conteúdo) */
+  destaques?: Numero[]
   galeria: { foto: string; alt: string; midia?: Midia }[]
+  /** Comparação antes x depois da Humanize (mesma métrica nos dois lados) */
+  comparacao?: { metrica: string; antes: { periodo: string; valor: string }; depois: { periodo: string; valor: string } }[]
+  /** Evolução mês a mês de uma métrica (vira gráfico de barras). "antes: true" marca meses antes da Humanize. */
+  evolucao?: { metrica: string; pontos: { rotulo: string; valor: number; antes?: boolean }[] }
+  /** Slugs de trabalhos.ts que aparecem na página do case */
+  trabalhos?: string[]
+  /** De onde vieram os números (aparece em letra pequena) */
+  fonte?: string
   servicos: string[]
   cor: Cor
   ficticio: boolean

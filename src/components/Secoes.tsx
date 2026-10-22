@@ -64,11 +64,11 @@ export function CardResultado({ item, indice = 0 }: { item: Case; indice?: numbe
       <Contador valor={item.destaque.valor} className="text-[3.5rem] font-bold leading-none tracking-tight text-coral-escuro tabular-nums sm:text-6xl" />
       <p className="text-lg font-semibold leading-snug">{item.destaque.legenda}</p>
       <p className="text-sm text-grafite">
-        {item.cliente} · {item.cidade}
+        {[item.cliente, item.cidade, item.periodo].filter(Boolean).join(' · ')}
       </p>
       <p className="flex-1 leading-relaxed text-grafite">{item.resumo}</p>
       <ul className="flex flex-wrap gap-2">
-        {item.numeros.slice(1).map((n) => (
+        {item.numeros.slice(1, 3).map((n) => (
           <li key={n.legenda} className="rounded-full bg-laranja-claro px-3 py-1 text-sm font-semibold">
             {n.valor} {n.legenda}
           </li>
@@ -96,7 +96,7 @@ export function SecaoResultados() {
           corManuscrito="text-ameixa"
           corRabisco="creme"
         />
-        <ul className="mt-12 grid gap-4 md:grid-cols-3 lg:gap-5">
+        <ul className={`mt-12 grid gap-4 lg:gap-5 ${cases.length % 3 === 0 ? 'md:grid-cols-3' : 'md:grid-cols-2'}`}>
           {cases.map((c, i) => (
             <CardResultado key={c.slug} item={c} indice={i} />
           ))}

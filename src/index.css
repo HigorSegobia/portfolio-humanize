@@ -155,6 +155,9 @@
   .js [data-revelar='desenhar'] { transition-delay: calc(var(--atraso, 0ms) + 250ms); }
   .js [data-revelar='desenhar']:not([data-visto]) { opacity: 1; translate: none; clip-path: inset(0 100% 0 0); }
   .js [data-revelar='desenhar'][data-visto] { clip-path: inset(0 0 0 0); }
+  /* barras de gráfico crescem a partir da base */
+  .js [data-revelar='crescer'] { transform-origin: bottom; }
+  .js [data-revelar='crescer']:not([data-visto]) { opacity: 1; translate: none; scale: 1 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {

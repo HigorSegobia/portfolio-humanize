@@ -34,7 +34,7 @@ export default function Trabalhos() {
     <>
       <Seo
         titulo="Trabalhos"
-        descricao="Reels e conteúdos feitos pela Agência Humanize para clientes de moda, odontologia, gastronomia e farmácia em Ribeirão Preto, Monte Alto, Franca e região."
+        descricao="Reels e conteúdos feitos pela Agência Humanize para clientes de moda, saúde, odontologia, gastronomia e farmácia em Ribeirão Preto, Monte Alto, Franca e região."
       />
       <section className="container-site pb-12 pt-12 sm:pt-16" aria-labelledby="titulo-pagina">
         <TituloSecao
@@ -42,7 +42,7 @@ export default function Trabalhos() {
           nivel={1}
           titulo="Trabalhos"
           manuscrito="feitos de perto"
-          texto="Reels feitos para clientes reais de moda, odontologia, gastronomia e farmácia. Toque em um trabalho para assistir aqui mesmo."
+          texto="Reels feitos para clientes reais de moda, saúde, odontologia, gastronomia e farmácia. Toque em um trabalho para assistir aqui mesmo."
         />
 
         <div className="mt-10" role="group" aria-label="Filtrar por categoria" data-revelar="subir">

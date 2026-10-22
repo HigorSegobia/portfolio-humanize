@@ -14,14 +14,15 @@ export function Contador({ valor, className = '' }: { valor: string; className?:
 
   useEffect(() => {
     const el = ref.current
-    const partes = valor.match(/^(\D*)(\d+(?:,\d+)?)(\D*)$/)
+    // aceita milhar com ponto ("329.776") e decimal com vírgula ("1,8")
+    const partes = valor.match(/^(\D*)(\d{1,3}(?:\.\d{3})+(?:,\d+)?|\d+(?:,\d+)?)(\D*)$/)
     if (!el || !partes || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const r = el.getBoundingClientRect()
     if (r.top < window.innerHeight && r.bottom > 0) return // já está na tela: não volta para zero
 
     const [, antes, numero, depois] = partes
     const casas = numero.includes(',') ? numero.split(',')[1].length : 0
-    const alvo = Number(numero.replace(',', '.'))
+    const alvo = Number(numero.replace(/\./g, '').replace(',', '.'))
     const formatar = (v: number) =>
       antes + v.toLocaleString('pt-BR', { minimumFractionDigits: casas, maximumFractionDigits: casas }) + depois
 

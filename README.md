@@ -80,7 +80,7 @@ Dicas:
 
 ### Conteúdo fictício e selo "exemplo"
 
-**Os trabalhos (reels) são de clientes reais.** Já os **cases e os números da seção "Resultados" continuam FICTÍCIOS**. Cada item tem o campo `ficticio`:
+**Tudo é real:** os trabalhos são reels de clientes, e os cases (Biomagistral Monte Alto e Franca) usam números do Instagram Insights, com a fonte indicada no campo `fonte` de cada case. Se um dia entrar algum conteúdo de exemplo, use o campo `ficticio`:
 
 ```ts
 ficticio: true,   // mostra o selo discreto "exemplo"
@@ -98,7 +98,7 @@ demo: true,   // mostra a faixa no topo de todas as páginas
 demo: false,  // esconde a faixa
 ```
 
-O texto da faixa fica em `demoTexto`, logo abaixo.
+O texto da faixa fica em `demoTexto`, logo abaixo. Ela está **desligada**, porque não há mais conteúdo fictício no site.
 
 ### Depoimentos
 

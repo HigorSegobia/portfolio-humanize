@@ -13,7 +13,7 @@ export const site = {
    * Faixa "versão de demonstração" no topo de todas as páginas.
    * Mude para false quando os cases e números forem reais.
    */
-  demo: true,
+  demo: false,
   demoTexto:
     'Versão de demonstração: cases e números marcados como “exemplo” são fictícios e serão trocados pelos resultados reais.',
 
@@ -61,10 +61,11 @@ export const categorias: Record<Categoria, string> = {
   odontologia: 'Odontologia',
   gastronomia: 'Gastronomia',
   farmacia: 'Farmácia',
+  saude: 'Saúde',
 }
 
 /** Faixa animada "quem já trabalha com a gente" na home. */
-export const clientes = ['Folk', 'Almad', 'Mello e Pinelli', 'Saguta Burgers', 'Kamzu', 'Boxpark', 'Poupe Já', 'Biomagistral', 'Dra. Raissa Martins', 'Dr. Sérgio Sanchini']
+export const clientes = ['Folk', 'Almad', 'Mello e Pinelli', 'Saguta Burgers', 'Kamzu', 'Boxpark', 'Poupe Já', 'Biomagistral', 'Dra. Raissa Martins', 'Dr. Sérgio Sanchini', 'Dra. Jaque Pereira', 'Dr. Bruno Barbosa', 'Três Guris', 'Nanana']
 
 /** Textos da página inicial. */
 export const home = {
@@ -85,7 +86,7 @@ export const home = {
   trabalhos: {
     titulo: 'O que a gente',
     tituloManuscrito: 'anda fazendo',
-    texto: 'Reels de verdade, feitos para clientes de moda, odontologia, gastronomia e farmácia. Toque em um card para assistir sem sair do site.',
+    texto: 'Reels de verdade, feitos para clientes de moda, saúde, odontologia, gastronomia e farmácia. Toque em um card para assistir sem sair do site.',
   },
   servicos: {
     titulo: 'Como a gente ajuda',
@@ -95,7 +96,7 @@ export const home = {
   resultados: {
     titulo: 'Resultados',
     tituloManuscrito: 'que dá pra medir',
-    texto: 'Conteúdo bonito é o começo. O que a gente acompanha de verdade é o que ele traz para o negócio.',
+    texto: 'Conteúdo bonito é o começo. Estes são números reais, tirados do Instagram dos nossos clientes.',
   },
   quemSomos: {
     titulo: 'Quem está por trás',
