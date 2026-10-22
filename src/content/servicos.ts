@@ -40,8 +40,8 @@ export const servicos: Servico[] = [
     ],
     paraQuem: ['Empresas que postam sem constância', 'Marcas que querem sair do “post bonito sem resultado”'],
     exemplos: ['almad', 'kamzu', 'poupe-ja'],
-    foto: 'capa-poupe-ja',
-    alt: 'Cena do reel da Poupe Já: entregador e atendente sorrindo',
+    foto: 'feed-nanana',
+    alt: 'Feed do Instagram da Nanana criado pela Humanize: fotos de bebês e família alternadas com posts em lilás sobre a rotina do sono',
   },
   {
     slug: 'storymaker',
@@ -60,8 +60,8 @@ export const servicos: Servico[] = [
     ],
     paraQuem: ['Casamentos e aniversários', 'Eventos corporativos e lançamentos', 'Festas e formaturas'],
     exemplos: ['boxpark', 'saguta'],
-    foto: 'capa-boxpark',
-    alt: 'Cena do reel do Boxpark: mulher sorrindo enquanto serve massa com queijo',
+    foto: 'storymaker-casamento',
+    alt: 'Story de casamento feito pela Humanize: casal correndo de mãos dadas num campo com neblina, com o texto “Início: em tempo real, começa agora um grande dia”',
   },
   {
     slug: 'cobertura-de-eventos',
@@ -80,8 +80,8 @@ export const servicos: Servico[] = [
     ],
     paraQuem: ['Rodeios e eventos sertanejos', 'Feiras do agro e da indústria', 'Lançamentos e ações de marca'],
     exemplos: [],
-    foto: 'equipe-barretos',
-    alt: 'Equipe da Humanize em cobertura de evento sertanejo em Barretos',
+    foto: 'cobertura-tres-guris',
+    alt: 'Cobertura de evento da Três Guris: convidada de chapéu sorrindo ao lado do banner “Central do Alho”, com fotógrafo e público ao redor',
   },
   {
     slug: 'trafego-pago',
