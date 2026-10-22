@@ -85,8 +85,8 @@ export const home = {
     ctaSecundario: 'Ver trabalhos',
     colagem: [
       { foto: 'camera', alt: 'Gravação de vídeo com cliente', legenda: 'dia de gravação' },
-      { foto: 'sofa', alt: 'Integrante da equipe comemorando no escritório', legenda: 'a gente ama isso aqui' },
-      { foto: 'equipe-barretos', alt: 'Equipe de audiovisual da Humanize em evento sertanejo', legenda: 'cobertura em Barretos' },
+      { foto: 'cobertura-barretos', alt: 'Estátua do peão no parque do Circuito Sertanejo em Barretos, com a roda-gigante ao fundo', legenda: 'cobertura em Barretos' },
+      { foto: 'reuniao-briefing', alt: 'Integrante da Humanize em reunião de briefing com cliente, em frente ao notebook', legenda: 'reunião de briefing' },
     ],
     bilhete: 'Audiovisual com estratégia',
   },
