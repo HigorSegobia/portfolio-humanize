@@ -14,7 +14,7 @@ export interface PedidoDiagnostico {
 
 export function mensagemDiagnostico(p: PedidoDiagnostico) {
   return [
-    'Oi, Humanize! Quero um diagnóstico gratuito da minha marca.',
+    'Oi, Humanize! Quero um diagnóstico da minha marca.',
     '',
     `*Nome:* ${p.nome}`,
     `*Empresa:* ${p.empresa}`,

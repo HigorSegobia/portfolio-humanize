@@ -106,7 +106,7 @@ function Cabecalho() {
         <div className="flex items-center gap-2">
           <span className="hidden sm:block">
             <Link to="/#contato" className={classesBotao('primario', '!min-h-11 !px-5 !py-2')}>
-              Diagnóstico gratuito
+              Pedir diagnóstico
             </Link>
           </span>
           <button
@@ -135,7 +135,7 @@ function Cabecalho() {
             ))}
           </ul>
           <Link to="/#contato" className={classesBotao('primario', 'mt-4 w-full')}>
-            Quero um diagnóstico gratuito
+            Quero um diagnóstico
           </Link>
         </nav>
       </div>

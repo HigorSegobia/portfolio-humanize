@@ -16,6 +16,10 @@ export type Categoria =
   | 'gastronomia'
   | 'farmacia'
   | 'saude'
+  | 'automotivo'
+  | 'pet'
+  | 'atelie'
+  | 'varejo'
 
 export type IconeMarca =
   | 'coracao'

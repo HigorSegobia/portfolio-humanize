@@ -1,6 +1,6 @@
 # Site da Agência Humanize
 
-Site-portfólio da Agência Humanize (Ribeirão Preto/SP). O objetivo principal é gerar pedidos de **diagnóstico gratuito pelo WhatsApp**.
+Site-portfólio da Agência Humanize (Ribeirão Preto/SP). O objetivo principal é gerar pedidos de **diagnóstico pelo WhatsApp**.
 
 Feito com Vite + React + TypeScript + Tailwind CSS. As páginas são **pré-renderizadas em HTML no build**: abrem rápido no celular, aparecem certinho no Google e mostram título e imagem corretos quando o link é compartilhado no WhatsApp.
 

@@ -39,7 +39,7 @@ export default function ServicoPage() {
             <p className="mt-3 manuscrito text-3xl sm:text-4xl">{servico.chamada}</p>
             <p className="mt-6 max-w-[52ch] text-lg font-medium leading-relaxed">{servico.descricao}</p>
             <Botao href="/#contato" variante="escuro" className="mt-8">
-              Quero um diagnóstico gratuito
+              Quero um diagnóstico
             </Botao>
           </div>
           <div className="relative mx-auto w-full max-w-sm">
@@ -54,7 +54,7 @@ export default function ServicoPage() {
       <section className="container-site grid gap-12 py-16 sm:py-20 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]" aria-labelledby="inclui">
         <div>
           <h2 id="inclui" className="text-3xl sm:text-4xl">
-            O que está incluído
+            O que está incluso
           </h2>
           <ul className="mt-6 grid gap-3">
             {servico.inclui.map((item, i) => (

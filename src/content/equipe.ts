@@ -6,10 +6,10 @@ import type { Pessoa } from './tipos.ts'
 export const equipe: Pessoa[] = [
   {
     nome: 'Julia Ribeiro',
-    cargo: 'Fundadora e diretora criativa',
+    cargo: 'Fundadora, publicitária e influenciadora',
     foto: 'quem',
     alt: 'Julia Ribeiro sentada em uma poltrona, sorrindo',
-    bio: 'À frente da Humanize, Julia cuida da estratégia e da direção criativa de cada cliente. Acredita que a melhor história de uma marca está nas pessoas que fazem ela acontecer.',
+    bio: 'Publicitária e influenciadora, Julia está à frente da Humanize e cuida da estratégia e da direção criativa de cada cliente. Acredita que a melhor história de uma marca está nas pessoas que fazem ela acontecer.',
     instagram: 'byjuliaribeiro',
   },
   {
@@ -20,10 +20,10 @@ export const equipe: Pessoa[] = [
     bio: 'Quem vai até a sua empresa ou evento com câmera na mão, roteiro no bolso e prazo curto.',
   },
   {
-    nome: 'Equipe de social media',
+    nome: 'Equipe head de estratégia',
     cargo: 'Planejamento, criação e tráfego',
     foto: 'escritorio',
-    alt: 'Equipe de social media trabalhando no escritório',
+    alt: 'Equipe de estratégia trabalhando no escritório',
     bio: 'Transforma o que foi gravado em calendário, posts, anúncios e relatório com números.',
   },
 ]

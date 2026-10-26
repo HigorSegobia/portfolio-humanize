@@ -69,10 +69,14 @@ export const categorias: Record<Categoria, string> = {
   gastronomia: 'Gastronomia',
   farmacia: 'Farmácia',
   saude: 'Saúde',
+  automotivo: 'Automotivo',
+  pet: 'Pet shop',
+  atelie: 'Ateliê',
+  varejo: 'Varejo',
 }
 
 /** Faixa animada "quem já trabalha com a gente" na home. */
-export const clientes = ['Folk', 'Almad', 'Mello e Pinelli', 'Saguta Burgers', 'Kamzu', 'Boxpark', 'Poupe Já', 'Biomagistral', 'Dra. Raissa Martins', 'Dr. Sérgio Sanchini', 'Dra. Jaque Pereira', 'Dr. Bruno Barbosa', 'Três Guris', 'Nanana']
+export const clientes = ['Folk', 'Almad', 'Mello e Pinelli', 'Saguta Burgers', 'Kamzu', 'Boxpark', 'Poupe Já', 'Biomagistral', 'Dra. Raissa Martins', 'Dr. Sérgio Sanchini', 'Dra. Jaque Pereira', 'Dr. Bruno Barbosa', 'Três Guris', 'Nanana', 'Fiat Confialle', 'Agropema', 'Rosane Almeida', 'Farol das Tintas', 'Travessos Boutique']
 
 /** Textos da página inicial. */
 export const home = {
@@ -81,7 +85,7 @@ export const home = {
     tituloManuscrito: 'não de tendência.',
     texto:
       'Agência de publicidade e marketing com audiovisual no centro de tudo. A gente vai até a sua empresa, encontra as pessoas e as histórias, e transforma isso em estratégia.',
-    ctaPrincipal: 'Quero um diagnóstico gratuito',
+    ctaPrincipal: 'Quero um diagnóstico',
     ctaSecundario: 'Ver trabalhos',
     colagem: [
       { foto: 'camera', alt: 'Gravação de vídeo com cliente', legenda: 'dia de gravação' },
@@ -109,7 +113,7 @@ export const home = {
     titulo: 'Quem está por trás',
     tituloManuscrito: 'da Humanize',
     paragrafos: [
-      'A Humanize é uma agência de publicidade e marketing de Ribeirão Preto, sob a visão de Julia Ribeiro. A gente acredita que toda marca já tem as melhores histórias para contar: as das pessoas que fazem ela acontecer.',
+      'A Humanize é uma agência de publicidade e marketing de Ribeirão Preto, sob a visão de Julia Ribeiro, publicitária e influenciadora. A gente acredita que toda marca já tem as melhores histórias para contar: as das pessoas que fazem ela acontecer.',
       'Por isso o nosso trabalho começa fora do computador, com câmera na mão, dentro da empresa, da loja, do evento. A estratégia vem junto, para cada vídeo ter um motivo de existir.',
     ],
     assinatura: 'Julia Ribeiro e equipe',
@@ -125,13 +129,13 @@ export const home = {
   contato: {
     titulo: 'Bora conversar?',
     texto:
-      'Conte um pouco da sua marca. Em até 3 dias úteis a gente devolve um diagnóstico da sua presença digital, sem custo.',
+      'Conte um pouco da sua marca. Em até 3 dias úteis a gente devolve um diagnóstico da sua presença digital.',
   },
 }
 
 export const processo: { titulo: string; texto: string; icone: IconeMarca }[] = [
   {
-    titulo: 'Diagnóstico gratuito',
+    titulo: 'Diagnóstico',
     texto: 'Analisamos suas redes, Google e anúncios e mostramos onde estão as oportunidades.',
     icone: 'busca',
   },

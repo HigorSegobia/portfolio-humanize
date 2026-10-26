@@ -22,7 +22,7 @@ function validar(d: PedidoDiagnostico): Erros {
 
 const ordem: Campo[] = ['nome', 'empresa', 'cidade', 'whatsapp', 'objetivo']
 
-export function FormularioDiagnostico({ titulo = 'Pedir diagnóstico gratuito' }: { titulo?: string }) {
+export function FormularioDiagnostico({ titulo = 'Pedir diagnóstico' }: { titulo?: string }) {
   const id = useId()
   const formRef = useRef<HTMLFormElement>(null)
   const [dados, setDados] = useState<PedidoDiagnostico>(vazio)

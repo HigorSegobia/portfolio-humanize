@@ -322,11 +322,11 @@ export function ChamadaDiagnostico({ titulo = 'Vamos olhar para a sua marca?', t
         <div className="relative max-w-2xl">
           <h2 className="text-4xl sm:text-5xl">{titulo}</h2>
           <p className="mt-4 text-lg text-creme/90">
-            {texto ?? 'Em até 3 dias úteis a gente devolve um diagnóstico gratuito das suas redes, do Google e dos anúncios, com as oportunidades que encontramos.'}
+            {texto ?? 'Em até 3 dias úteis a gente devolve um diagnóstico das suas redes, do Google e dos anúncios, com as oportunidades que encontramos.'}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Botao href="/#contato" variante="primario">
-              Quero um diagnóstico gratuito
+              Quero um diagnóstico
             </Botao>
             <a
               href={linkWhatsapp()}

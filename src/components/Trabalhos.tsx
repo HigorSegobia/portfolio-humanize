@@ -19,6 +19,11 @@ const iconeCategoria: Partial<Record<Trabalho['categoria'], IconeMarca>> = {
   fitness: 'alvo',
   agro: 'lampada',
   audiovisual: 'video',
+  saude: 'coracao',
+  automotivo: 'alvo',
+  pet: 'coracao',
+  atelie: 'brilho',
+  varejo: 'notificacao',
 }
 const rabiscoCapa: Record<Cor, Cor | 'creme'> = { coral: 'creme', laranja: 'coral', menta: 'roxo', roxo: 'creme' }
 
