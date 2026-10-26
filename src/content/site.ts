@@ -7,7 +7,7 @@ export const site = {
    * e também define a subpasta do build: no GitHub Pages o site fica em /portfolio-humanize/.
    * Ao usar um domínio próprio, troque para algo como 'https://www.agenciahumanize.com.br'.
    */
-  url: 'https://higorsegobia.github.io/portfolio-humanize',
+  url: 'https://www.agenciahumanize.com.br',
 
   /**
    * Faixa "versão de demonstração" no topo de todas as páginas.
