@@ -4,8 +4,8 @@ export const site = {
   nome: 'Agência Humanize',
   /**
    * Endereço final do site (sem barra no fim). Usado no sitemap, Open Graph e schema.org,
-   * e também define a subpasta do build: no GitHub Pages o site fica em /portfolio-humanize/.
-   * Ao usar um domínio próprio, troque para algo como 'https://www.agenciahumanize.com.br'.
+   * e também define a subpasta do build (com domínio próprio fica na raiz "/";
+   * no endereço do GitHub seria 'https://higorsegobia.github.io/portfolio-humanize').
    */
   url: 'https://www.agenciahumanize.com.br',
 

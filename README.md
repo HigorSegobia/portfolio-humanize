@@ -18,7 +18,7 @@ npm install
 npm run dev
 ```
 
-Abra http://localhost:5173/portfolio-humanize/ (a subpasta vem do `url` em `site.ts`). Cada arquivo que você salvar atualiza a página na hora.
+Abra http://localhost:5173. Cada arquivo que você salvar atualiza a página na hora.
 
 Para ver a versão final (igual à que vai para o ar):
 
@@ -30,7 +30,7 @@ npm run build
 npm run preview
 ```
 
-Abra http://localhost:4173/portfolio-humanize/.
+Abra http://localhost:4173.
 
 | Comando | O que faz |
 |---|---|
@@ -195,13 +195,13 @@ São registradas a visualização de cada página e um evento de **lead** (`gene
 - Título, descrição, link canônico e Open Graph por página: cada página informa os seus no componente `<Seo>`, e eles já saem no HTML pré-renderizado.
 - Dados estruturados `LocalBusiness` (schema.org) com Ribeirão Preto e cidades atendidas: gerados a partir de `site.ts`.
 - `sitemap.xml` e `robots.txt` são gerados a cada build com todas as páginas de serviço e case.
-- **O endereço do site fica em `url`, no `site.ts`** (hoje `https://higorsegobia.github.io/portfolio-humanize`). Ele alimenta sitemap, canonical, Open Graph e schema.org, e também define a subpasta do build.
+- **O endereço do site fica em `url`, no `site.ts`** (hoje `https://www.agenciahumanize.com.br`). Ele alimenta sitemap, canonical, Open Graph e schema.org, e também define a subpasta do build.
 
 ---
 
 ## 10. Publicar no GitHub Pages (atual)
 
-O repositório é https://github.com/HigorSegobia/portfolio-humanize e o site fica em **https://higorsegobia.github.io/portfolio-humanize/**.
+O repositório é https://github.com/HigorSegobia/portfolio-humanize e o site fica no domínio próprio **https://www.agenciahumanize.com.br** (DNS no Registro.br: CNAME `www` → `higorsegobia.github.io` e 4 registros A para o domínio sem www).
 
 A publicação é automática: o workflow `.github/workflows/deploy.yml` roda `npm run build` e publica a pasta `dist` **a cada push na branch `main`**. Também dá para rodar manualmente em **Actions → Publicar no GitHub Pages → Run workflow**.
 
@@ -209,7 +209,7 @@ Configuração única no GitHub:
 1. **Settings → Pages → Build and deployment → Source:** escolha **GitHub Actions**.
 2. (Opcional) Para ligar o Analytics, crie as variáveis `VITE_GA_ID` e `VITE_META_PIXEL_ID` em **Settings → Secrets and variables → Actions → Variables**.
 
-**Subpasta:** como o site fica em `/portfolio-humanize/`, todos os caminhos (fotos, fontes, links) usam essa subpasta automaticamente. Ela é tirada do `url` em `src/content/site.ts`, então não precisa mexer em mais nada.
+**Endereço e subpasta:** tudo (fotos, fontes, links, sitemap) segue o `url` em `src/content/site.ts`. Com o domínio próprio o site fica na raiz. Se um dia voltar para o endereço do GitHub, troque para `https://higorsegobia.github.io/portfolio-humanize` e a subpasta é aplicada sozinha.
 
 **Domínio próprio (ex.: agenciahumanize.com.br):**
 1. Em `site.ts`, troque `url` para `'https://www.agenciahumanize.com.br'`. A subpasta some sozinha.
