@@ -152,7 +152,7 @@ function Rodape() {
             <Logo versao="vertical" className="h-24 w-auto aspect-[2023/1384]" label="" />
           </Link>
           <p className="mt-6 max-w-[34ch] text-creme/85">{site.bio}</p>
-          <p className="mt-4 manuscrito text-3xl text-laranja">feito com gente, em Ribeirão Preto</p>
+          <p className="mt-4 manuscrito text-3xl text-laranja">feito com gente</p>
         </div>
         <nav aria-label="Serviços">
           <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-roxo-claro">Serviços</h2>
