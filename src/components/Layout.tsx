@@ -209,7 +209,8 @@ function Rodape() {
           © {new Date().getFullYear()} {site.nome} · Publicidade, marketing e audiovisual · {site.endereco.cidade}, {site.endereco.estado}
         </p>
       </div>
-      <Rabisco forma="zigue" cor="coral" className="absolute -right-6 top-10 hidden w-40 opacity-90 md:block" />
+      {/* Rabisco só em telas bem largas, na margem livre ao lado do conteúdo (não cobre os contatos) */}
+      <Rabisco forma="zigue" cor="coral" className="absolute -right-6 top-10 hidden w-32 opacity-90 2xl:block" />
     </footer>
   )
 }
